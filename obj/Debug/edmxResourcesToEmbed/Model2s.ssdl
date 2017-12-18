@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductBASEEModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="descriptionA" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="login" />
+    </Key>
+    <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="img" Type="nvarchar(max)" />
+    <Property Name="nbprod" Type="int" />
+    <Property Name="image" Type="image" />
+  </EntityType>
+  <EntityType Name="Personnne">
+    <Key>
+      <PropertyRef Name="login" />
+    </Key>
+    <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="img" Type="nvarchar" MaxLength="100" />
+    <Property Name="nbprod" Type="int" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="idpr" />
+    </Key>
+    <Property Name="idpr" Type="int" Nullable="false" />
+    <Property Name="productName" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="authorname" Type="nvarchar" MaxLength="50" />
+    <Property Name="imgUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ShopCart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="idpr" Type="int" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ShopProd">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ShopProdd">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ShopProds">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ProductBASEEModel1StoreContainer">
+    <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personnne" EntityType="Self.Personnne" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopCart" EntityType="Self.ShopCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopProd" EntityType="Self.ShopProd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopProdd" EntityType="Self.ShopProdd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopProds" EntityType="Self.ShopProds" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

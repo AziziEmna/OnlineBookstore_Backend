@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProductBASEEModel1StoreContainer" CdmEntityContainer="ProductBASEEEntities1">
+    <EntitySetMapping Name="Personne">
+      <EntityTypeMapping TypeName="ProductBASEEModel1.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="nbprod" ColumnName="nbprod" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="ProductBASEEModel1.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="authorname" ColumnName="authorname" />
+          <ScalarProperty Name="idpr" ColumnName="idpr" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="imgUrl" ColumnName="imgUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopProd">
+      <EntityTypeMapping TypeName="ProductBASEEModel1.ShopProd">
+        <MappingFragment StoreEntitySet="ShopProd">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="ProductBASEEModel1.Author">
+        <MappingFragment StoreEntitySet="Author">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personnnes">
+      <EntityTypeMapping TypeName="ProductBASEEModel1.Personnne">
+        <MappingFragment StoreEntitySet="Personnne">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="nbprod" ColumnName="nbprod" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="login" ColumnName="login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="ProductBASEEModel1.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
